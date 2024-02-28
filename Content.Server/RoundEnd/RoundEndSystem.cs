@@ -190,7 +190,7 @@ namespace Content.Server.RoundEnd
                 null,
                 Color.Gold);
 
-            _audio.PlayGlobal("/Audio/Announcements/shuttlecalled.ogg", Filter.Broadcast(), true);
+            _audio.PlayGlobal("/Audio/Frontier/shiftsend.ogg", Filter.Broadcast(), true);
 
             LastCountdownStart = _gameTiming.CurTime;
             ExpectedCountdownEnd = _gameTiming.CurTime + countdownTime;
