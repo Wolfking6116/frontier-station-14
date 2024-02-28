@@ -112,8 +112,8 @@
 
 - type: entity
   id: ActionAGhostShowRadar
-  name: Mass Scanner Interface
-  description: View a mass scanner interface.
+  name: Radar Console Interface # Frontier
+  description: View a radar console interface. # Frontier
   noSpawn: true
   components:
   - type: InstantAction
@@ -151,8 +151,8 @@
 
 - type: entity
   id: ActionAGhostShowStationRecords
-  name: Station Records Interface
-  description: View a station records Interface
+  name: Crew Manifest Interface # Frontier
+  description: View a crew manifest Interface # Frontier
   noSpawn: true
   components:
   - type: InstantAction

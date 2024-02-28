@@ -305,8 +305,8 @@
 - type: entity
   parent: BaseComputer
   id: ComputerStationRecords
-  name: station records computer
-  description: This can be used to check station records.
+  name: crew manifest computer # Frontier
+  description: This can be used to check crew manifest logs. # Frontier
   components:
   - type: GeneralStationRecordConsole
   - type: UserInterface
@@ -629,7 +629,7 @@
 - type: entity
   parent: BaseComputer
   id: ComputerRadar
-  name: mass scanner computer
+  name: radar console computer
   description: A computer for detecting nearby bodies, displaying them by position and mass.
   components:
   - type: Sprite

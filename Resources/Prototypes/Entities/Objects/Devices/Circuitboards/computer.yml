@@ -74,8 +74,8 @@
 - type: entity
   parent: BaseComputerCircuitboard
   id: StationRecordsComputerCircuitboard
-  name: station records computer board
-  description: A computer printed circuit board for a station records computer.
+  name: crew manifest computer board # Frontier
+  description: A computer printed circuit board for a crew manifest computer. # Frontier
   components:
     - type: Sprite
       state: cpu_command
