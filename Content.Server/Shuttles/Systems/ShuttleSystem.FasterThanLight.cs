@@ -231,6 +231,25 @@ public sealed partial class ShuttleSystem
         // TODO: Maybe move this to docking instead?
         SetDocks(uid, false);
 
+        FTLTimer.SetTimer(10f);
+        while (FTLTimer.IsDone != true)
+        {
+            if (FTLTimer.IsDone == true)
+            {
+                Logger.DebugS("timer", $"timer has finished");
+                break;
+            }
+            // else if (FTLTimer.IsDone == true)
+            // {
+            //     return false;
+            // }
+            else
+            {
+                Logger.DebugS("timer", $"timer has not finished");
+                continue;
+            }
+        }
+
         component = AddComp<FTLComponent>(uid);
         component.State = FTLState.Starting;
         var audio = _audio.PlayPvs(_startupSound, uid);
