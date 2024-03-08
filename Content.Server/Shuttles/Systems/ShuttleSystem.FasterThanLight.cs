@@ -226,10 +226,6 @@ public sealed partial class ShuttleSystem
         }
 
         _thruster.DisableLinearThrusters(shuttle);
-        _thruster.EnableLinearThrustDirection(shuttle, DirectionFlag.North);
-        _thruster.SetAngularThrust(shuttle, false);
-        // TODO: Maybe move this to docking instead?
-        SetDocks(uid, false);
 
         FTLTimer.SetTimer(10f);
         while (FTLTimer.IsDone != true)
@@ -249,6 +245,11 @@ public sealed partial class ShuttleSystem
                 continue;
             }
         }
+
+        _thruster.EnableLinearThrustDirection(shuttle, DirectionFlag.North);
+        _thruster.SetAngularThrust(shuttle, false);
+        // TODO: Maybe move this to docking instead?
+        SetDocks(uid, false);
 
         component = AddComp<FTLComponent>(uid);
         component.State = FTLState.Starting;
